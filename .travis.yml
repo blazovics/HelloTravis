@@ -5,3 +5,4 @@ solution: HelloTravis.sln
 script:
  - dotnet restore
  - dotnet build
+ - dotnet test HelloTravis_test/HelloTravis_test.csproj
