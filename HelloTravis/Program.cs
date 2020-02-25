@@ -4,7 +4,7 @@ namespace HelloTravis
 {
     class Program
     {
-        static void Main(string[] args)
+        stratic void Main(string[] args)
         {
             Console.WriteLine("Hello Travis!");
         }
