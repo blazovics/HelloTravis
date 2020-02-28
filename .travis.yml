@@ -3,6 +3,13 @@ mono: none
 dotnet: 3.1
 solution: HelloTravis.sln
 script:
- - dotnet restore
- - dotnet build
- - dotnet test HelloTravis_test/HelloTravis_test.csproj
+- dotnet restore
+- dotnet build
+- dotnet test HelloTravis_test/HelloTravis_test.csproj
+before_deploy:
+  script: ls -al
+deploy:
+  provider: releases
+  skip_cleanup: true
+  token:
+    secure: CYh15lpkNJQphyadeG1jhYjKywnsgaOfZOOeYty1ePa+LDUf/JIjfkjG/ZW0Mo8HOdAFaQee6a062Mr17Umw/dU8f5QdGWPqlpB/pcdvyxr5f4miKbCxJO13HlmxMB3COt+c/cGB26LnqAIIAxkTdRf5BHy5kvOmlEKcwihu9HmRwLNcClTL0ccH0kquLkrmEbK83TNHhXCNha2kt65k6CABuFaww8zQpx+mYNZAcpqzxU1GXSi3n9NncpEfzgsPe2FmzHarXYW0YUNVONn30RUE/hpFardpMMvfHkeDR/nEXPXoH2ycsGIYDSYfy4V3vda8rHhoTopGtSLbqpo3NCPYq+wrkdScCD3pGJddGmlqlhJBtvB1NynwMBnemgyKluF6GTEX4e1yKGvAaoFthjnm5wlC5VYGcgr1uayQy7gtHekSJPRSmKtXuintq5GzVrlKvNjKgetOUA4oMxywI91pn7qYRPQaFbpoIkTf8W/PlSxJNT+lUd39oUGcN6DFCCg0oXMnfLs2yQ01+xFLhPhFFr0sWHb7wA91TYRb8mqPJ7roj9mgCmpC9jYfM+UuCCOUOmR0656sWT9NTXGcIAiEc69wtX9F2BTtSHWyZ/mXwMTf+s6olqM/K7aWMeOwEIncUq1xjuOu00khBNmDmwHEcUW0amuOkxLgumZBRqo=
