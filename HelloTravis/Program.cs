@@ -7,6 +7,7 @@ namespace HelloTravis
         static void Main(string[] args)
         {
             Console.WriteLine("Hello Travis!");
+            Console.WriteLine("This is a feature!");
         }
     }
 }
