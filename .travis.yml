@@ -7,7 +7,7 @@ script:
 - dotnet build
 - dotnet test HelloTravis_test/HelloTravis_test.csproj
 before_deploy:
-  script: bash ls -al
+  - ls
 deploy:
   provider: releases
   skip_cleanup: true
